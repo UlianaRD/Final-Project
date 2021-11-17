@@ -61,7 +61,6 @@ WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1
 *	**Metric**: WHEN sum() of http.request.bytes OVER all documents
 *	**Threshold**: IS ABOVE 3500 
 *	**Vulnerability Mitigated**: Code injection in HTTP requests (XSS and CRLF) or DDoS 
-*	**Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
 
 ![Photo3](Photos/3.png)
 ![Photo4](Photos/4.png)
@@ -74,10 +73,7 @@ WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR T
 
 * **Metric**: WHEN max() OF system.process.cpu.total.pct OVER all documents
 *	**Threshold**: IS ABOVE 0.5 FOR THE LAST 5 minutes 
-*	**Vulnerability Mitigated**: Malicious software, programs (malware or viruses) running taking up resources
-*	**Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
-
-The alert is highly reliable. Even if there isn’t a malicious program running this can still help determine where to improve on CPU usage.
+*	**Reliability**: The alert is highly reliable. Even if there isn’t a malicious program running this can still help determine where to improve on CPU usage.
 
 ![Photo4](Photos/5.png)
 ![Photo5](Photos/6.png)
